@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Assignment-17</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="formatted">
+      <table>
+        <tr>
+          <th>INDEX</th>
+          <th>NAME</th>
+          <th>CLASS</th>
+        </tr>
+        <tr id="0">
+          <td>0</td>
+          <td>Sabih</td>
+          <td>12</td>
+          <td><button onclick="editRecord('form0',0)">EDIT</button></td>
+          <td><button onclick="deleteRow(0)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form0" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name0"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form0',0)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="1">
+          <td>1</td>
+          <td>Hassan</td>
+          <td>11</td>
+          <td><button onclick="editRecord('form1',1)">EDIT</button></td>
+          <td><button onclick="deleteRow(1)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form1" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form1',1)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="2">
+          <td>2</td>
+          <td>Ebad</td>
+          <td>9</td>
+          <td><button onclick="editRecord('form2',2)">EDIT</button></td>
+          <td><button onclick="deleteRow(2)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form2" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form2',2)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="3">
+          <td>3</td>
+          <td>Anas</td>
+          <td>9</td>
+          <td><button onclick="editRecord('form3',3)">EDIT</button></td>
+          <td><button onclick="deleteRow(3)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form3" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form3',3)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="4">
+          <td>4</td>
+          <td>Ali</td>
+          <td>8</td>
+          <td><button onclick="editRecord('form4',4)">EDIT</button></td>
+          <td><button onclick="deleteRow(4)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form4" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form4',4)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="5">
+          <td>5</td>
+          <td>Murtaza</td>
+          <td>10</td>
+          <td><button onclick="editRecord('form5',5)">EDIT</button></td>
+          <td><button onclick="deleteRow(5)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form5" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form5',5)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="6">
+          <td>6</td>
+          <td>Musab</td>
+          <td>8</td>
+          <td><button onclick="editRecord('form6',6)">EDIT</button></td>
+          <td><button onclick="deleteRow(6)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form6" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form6',6)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="7">
+          <td>7</td>
+          <td>Shahzaib</td>
+          <td>9</td>
+          <td><button onclick="editRecord('form7',7)">EDIT</button></td>
+          <td><button onclick="deleteRow(7)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form7" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form7',7)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="8">
+          <td>8</td>
+          <td>Waiz</td>
+          <td>7</td>
+          <td><button onclick="editRecord('form8',8)">EDIT</button></td>
+          <td><button onclick="deleteRow(8)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form8" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form8',8)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="9">
+          <td>9</td>
+          <td>Nofil</td>
+          <td>6</td>
+          <td><button onclick="editRecord('form9',9)">EDIT</button></td>
+          <td><button onclick="deleteRow(9)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form9" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form9',9)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+        <tr id="10">
+          <td>10</td>
+          <td>Saqlain</td>
+          <td>10</td>
+          <td><button onclick="editRecord('form10',10)">EDIT</button></td>
+          <td><button onclick="deleteRow(10)">DELETE</button></td>
+        </tr>
+        <tr>
+          <td>
+            <form id="form10" onsubmit="return false" hidden>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="class" class="form-label">class</label>
+                <input type="number" class="form-control" id="class" />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="updateRecord('form10',10)"
+              >
+                Submit
+              </button>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 1 -->
+    <section>
+      <form onsubmit="return false" class="formatted">
+        <h1 >Registration Form</h1>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control width"
+            id="emailInput"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="passwordInput" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control width"
+            id="passwordInput"
+          />
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="showInput()">
+          Submit
+        </button>
+      </form>
+    </section>
+    <h2 id="email"></h2>
+    <h2 id="password"></h2>
+    <section class="formatted">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+<button onclick="myFunction()" id="myBtn" class="btn btn-primary">Read more</button>
+    </section>
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
